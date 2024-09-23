@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>svg</title>
+    <title>SVG Example</title>
 </head>
 <body>
-    <svg width="100" height="100" viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg">
-        <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"/>
+
+    <svg style="display:none;">
+        <symbol id="house" viewBox="0 0 8 6">
+            <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"/>
+        </symbol>
+
+        <symbol id="face" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="30" fill="#FCEA2B" />
+            <circle cx="22" cy="24" r="4" fill="#6A462F" />
+            <circle cx="42" cy="24" r="4" fill="#6A462F" />
+            <rect x="22" y="40" width="20" height="4" fill="#E5A50A" />
+        </symbol>
     </svg>
 
-    <svg width="100" height="100" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
 
-        <circle cx="32" cy="32" r="30" fill="#FCEA2B" stroke="none" />
-        <circle cx="22" cy="24" r="4" fill="#6A462F" stroke="none" />
-        <circle cx="42" cy="24" r="4" fill="#6A462F" stroke="none" />
-        <rect x="22" y="40" width="20" height="4" fill="#E5A50A" stroke="none" />
-      </svg>
+    <svg width="100" height="100">
+        <use href="#house"></use>
+    </svg>
+
+    <svg width="100" height="100">
+        <use href="#face"></use>
+    </svg>
 
 </body>
 </html>
